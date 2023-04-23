@@ -1,13 +1,20 @@
-package com.inditex.masterwwsc;
+package entity;
 
 import lombok.Data;
 
 @Data
-public class Saludo {
+public class User {
     private Long id;
     private String username;
     private String name;
     private String email;
+
+    public User(Long id, String username, String name, String email){
+        this.id = id;
+        this.username = username;
+        this.name = name;
+        this.email = email;
+    }
 
     public Long getId() {
         return id;
@@ -40,11 +47,4 @@ public class Saludo {
     public void setEmail(String email) {
         this.email = email;
     }
-
-    public String getSaludo() {
-        return saludo;
-    }
-
-    private final String saludo ="Hello crack!!";
-
 }
