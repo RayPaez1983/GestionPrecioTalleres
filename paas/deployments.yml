@@ -1,0 +1,10 @@
+supraenvironments:
+  - name: des
+    environments:
+      - name: des
+        platforms:
+          - name: comercialarteixo
+            tenants:
+              - name: global
+                slots:
+                  - name: default

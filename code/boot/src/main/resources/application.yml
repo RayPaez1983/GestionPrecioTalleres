@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: masterwwsc
+app:
+  version: @project.version@
+
+logging:
+  level:
+    root: INFO
+server:
+  servlet:
+    context-path: /${spring.application.name}

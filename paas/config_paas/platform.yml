@@ -1,0 +1,20 @@
+app:
+  openshift_template: com.inditex.sentinel:senttapp-springboot:2.7.1
+  context_path_builder:
+    enabled: true
+  health_probe:
+    http_path: /amiga/health
+    initial_delay_seconds: 30
+  has_spnego: false
+  services:
+    http_private:
+      enabled: true
+    http:
+      route:
+        tls:
+          enabled: true
+janus:
+  enabled: true
+metadata:
+  developModel: CORPORATE
+  layer: core

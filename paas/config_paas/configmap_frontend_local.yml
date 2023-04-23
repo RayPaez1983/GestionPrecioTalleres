@@ -1,0 +1,10 @@
+amiga:
+  commons:
+    web:
+      janus:
+        enabled: true
+        endpoint: /
+      endpoints:
+        main: /masterwwsc
+metadata:
+  jirakey: masterwwsc

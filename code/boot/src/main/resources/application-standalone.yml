@@ -1,0 +1,18 @@
+logging:
+  level:
+    root: INFO
+#amiga:
+#  server:
+#    context-path: /masterwwsc
+#    port: 8080
+#  service:
+#    aaa:
+#      local:
+#        enable-local-test: true
+#      paths:
+#        app-public-path: /swagger-ui**,/itx-openapi.js
+#    rest:
+#      logging:
+#        is-production: false
+#metadata:
+#  jirakey: masterwwsc        

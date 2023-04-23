@@ -1,0 +1,7 @@
+amiga:
+  service:
+    aaa:
+      local:
+        enable-local-test: true
+      paths:
+        app-public-path: /swagger-ui**,/itx-openapi.js

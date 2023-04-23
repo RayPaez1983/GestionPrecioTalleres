@@ -1,0 +1,82 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.14.1
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
+ignore:
+  SNYK-JAVA-COMH2DATABASE-31685:
+    - '* > com.inditex.aqsw.framework.batch:batch-framework-starter@4.14.4 > com.inditex.aqsw.framework.batch:batch-framework-core@4.14.4 > com.h2database:h2@2.1.214':
+        reason: >-
+          No remediation available.
+  SNYK-JAVA-COMH2DATABASE-3146851:
+    - '* > com.inditex.aqsw.framework.batch:batch-framework-starter@4.14.4 > com.inditex.aqsw.framework.batch:batch-framework-core@4.14.4 > com.h2database:h2@2.1.214':
+        reason: >-
+          No remediation available.
+  SNYK-JAVA-IONETTY-1042268:
+    - '* > io.netty:netty-handler@4.1.86.Final':
+        reason: >- 
+          No remediation available
+  SNYK-JAVA-ORGJETBRAINSKOTLIN-2393744:
+    - '* > com.inditex.aqsw.framework.service:service-framework-starter-graphql-reactive@4.14.4 > com.graphql-java-kickstart:graphql-kickstart-spring-boot-starter-tools@7.2.0 > com.graphql-java-kickstart:graphql-kickstart-spring-boot-autoconfigure-tools@7.2.0 > com.graphql-java-kickstart:graphql-java-tools@6.1.0 > org.jetbrains.kotlin:kotlin-stdlib@1.6.21':
+        reason: >- 
+          No remediation available
+    - '* > com.inditex.aqsw.framework.service:service-framework-starter-graphql@4.14.4 > com.graphql-java-kickstart:graphql-spring-boot-starter@7.2.0 > com.graphql-java-kickstart:graphql-spring-boot-autoconfigure@7.2.0 > com.graphql-java-kickstart:graphql-kickstart-spring-boot-starter-tools@7.2.0 > com.graphql-java-kickstart:graphql-kickstart-spring-boot-autoconfigure-tools@7.2.0 > com.graphql-java-kickstart:graphql-java-tools@6.1.0 > org.jetbrains.kotlin:kotlin-stdlib@1.6.21':
+        reason: >- 
+          No remediation available
+  SNYK-JAVA-COMTHOUGHTWORKSXSTREAM-3091180:
+    - '* > com.inditex.aqsw.framework.common:common-framework-starter-rules-drools@4.14.4 > com.inditex.aqsw.framework.common:common-framework-drools@4.14.4 > com.inditex.aqsw.amiga.rules:amiga-rules-drools@1.8.0 > org.drools:drools-compiler@7.71.0.Final > com.thoughtworks.xstream:xstream@1.4.19':
+        reason: >- 
+          No remediation available
+    - '* > com.inditex.aqsw.framework.common:common-framework-starter-rules-configtool@4.14.4 > com.inditex.aqsw.framework.common:common-framework-rules-configtool@4.14.4 > com.inditex.aqsw.framework.common:common-framework-drools@4.14.4 > com.inditex.aqsw.amiga.rules:amiga-rules-drools@1.8.0 > org.drools:drools-compiler@7.71.0.Final > com.thoughtworks.xstream:xstream@1.4.19':
+        reason: >- 
+          No remediation available
+  SNYK-JAVA-ORGSPRINGFRAMEWORKCLOUD-2928757:
+    - '* > org.springframework.cloud:spring-cloud-function-context@3.2.4':
+        reason: >- 
+          We are not affected. More info at https://github.com/inditex/fwk-amigajava/issues/2861. We ignore it until spring cloud brings a fixed version.
+  SNYK-JAVA-COMAZURE-2949175:
+    - '* > com.inditex.aqsw.framework.data:data-framework-starter-stream-eventhub@4.14.4 > com.inditex.aqsw.framework.data:data-framework-stream-eventhub@4.14.4 > com.azure.spring:spring-cloud-azure-stream-binder-eventhubs@4.3.0 > com.azure:azure-messaging-eventhubs-checkpointstore-blob@1.13.0 > com.azure:azure-storage-blob@12.17.1':
+        reason: >- 
+          We ignore it until spring-cloud-azure-stream-binder-eventhubs brings a fixed version.
+  SNYK-JAVA-ORGYAML-2806360:
+    - '* > org.yaml:snakeyaml@1.30':
+        reason: >- 
+          We ignore it until spring boot brings a fixed version.
+  SNYK-JAVA-ORGYAML-3016891:
+    - '* > org.yaml:snakeyaml@1.30':
+        reason: >- 
+          We ignore it until spring boot brings a fixed version.
+  SNYK-JAVA-ORGYAML-3016888:
+    - '* > org.yaml:snakeyaml@1.30':
+        reason: >- 
+          We ignore it until spring boot brings a fixed version.
+  SNYK-JAVA-ORGYAML-3016889:
+    - '* > org.yaml:snakeyaml@1.30':
+        reason: >- 
+          We ignore it until spring boot brings a fixed version.
+  SNYK-JAVA-ORGYAML-3113851:
+    - '* > org.yaml:snakeyaml@1.30':
+        reason: >- 
+          No remediation available
+  SNYK-JAVA-ORGYAML-3152153:
+    - '* > org.yaml:snakeyaml@1.30':
+        reason: >- 
+          No remediation available
+  SNYK-JAVA-ORGSPRINGFRAMEWORKSECURITY-3092126:
+    - '* > org.springframework.security:spring-security-web@5.7.4':
+        reason: >- 
+          We ignore it until spring boot brings a fixed version.
+  SNYK-JAVA-ORGSPRINGFRAMEWORKSECURITY-3092127:
+    - '* > com.inditex.aqsw.framework.common:common-framework-starter-oauth2-client@4.14.4 > com.inditex.aqsw.framework.common:common-framework-oauth2-client@4.14.4 > org.springframework.boot:spring-boot-starter-oauth2-client@2.7.5 > org.springframework.security:spring-security-oauth2-client@5.7.4':
+        reason: >- 
+          We ignore it until spring boot brings a fixed version.
+  SNYK-JAVA-ORGAPACHESSHD-3121053:
+    - '* > com.inditex.aqsw.framework.common:common-framework-starter-cache-datagrid-remote@4.14.4 > org.infinispan:infinispan-spring-boot-starter-remote@13.0.6.Final-redhat-00001 > org.infinispan:infinispan-client-hotrod@13.0.6.Final-redhat-00001 > org.wildfly.security:wildfly-elytron-sasl-digest@1.17.2.Final-redhat-00001 > org.wildfly.security:wildfly-elytron-credential@1.17.2.Final-redhat-00001 > org.wildfly.security:wildfly-elytron-keystore@1.17.2.Final-redhat-00001 > org.wildfly.security:wildfly-elytron-x500-cert@1.17.2.Final-redhat-00001 > org.apache.sshd:sshd-common@2.3.0.redhat-00002':
+        reason: >- 
+          No remediation available
+    - '* > com.inditex.aqsw.framework.common:common-framework-starter-cache-datagrid-remote-reactive@4.14.4 > org.infinispan:infinispan-spring-boot-starter-remote@13.0.6.Final-redhat-00001 > org.infinispan:infinispan-client-hotrod@13.0.6.Final-redhat-00001 > org.wildfly.security:wildfly-elytron-sasl-digest@1.17.2.Final-redhat-00001 > org.wildfly.security:wildfly-elytron-credential@1.17.2.Final-redhat-00001 > org.wildfly.security:wildfly-elytron-keystore@1.17.2.Final-redhat-00001 > org.wildfly.security:wildfly-elytron-x500-cert@1.17.2.Final-redhat-00001 > org.apache.sshd:sshd-common@2.3.0.redhat-00002':
+        reason: >- 
+          No remediation available
+    - '* > com.inditex.aqsw.framework.service:service-framework-starter-session@4.14.4 > com.inditex.aqsw.framework.service:service-framework-session-infinispan@4.14.4 > org.infinispan:infinispan-client-hotrod@13.0.6.Final-redhat-00001 > org.wildfly.security:wildfly-elytron-sasl-digest@1.17.2.Final-redhat-00001 > org.wildfly.security:wildfly-elytron-credential@1.17.2.Final-redhat-00001 > org.wildfly.security:wildfly-elytron-keystore@1.17.2.Final-redhat-00001 > org.wildfly.security:wildfly-elytron-x500-cert@1.17.2.Final-redhat-00001 > org.apache.sshd:sshd-common@2.3.0.redhat-00002':
+        reason: >- 
+          No remediation available
+patch: {}
+org-id: masterws

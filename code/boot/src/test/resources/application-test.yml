@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: masterwwsc
+app:
+  version: @project.version@
+
+logging:
+  level:
+    root: INFO
+amiga:
+  common:
+    metrics:
+      enabled: false # Activate in case of test metrics
+    sleuth:
+      enabled: false # Activate in case of test sleuth 
+  service:
+    aaa:
+      local:
+        enable-local-test: true
+    grpcclient:
+      health:
+        enabled: false
+
+# Remove in case of testing actuator endpoints
+management:
+  endpoints:
+    web:
+      exposure:
+        exclude: '*'
+ 
+# Test Configuration
+test:
+  configuration:
+    jwt-token: "Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6ImxvY2FsLXRlc3QiLCJ0eXAiOiJKV1QifQ.eyJhdF9oYXNoIjoiRlIwY1ZrNjFIRk40ZUJtek5KbmJRdyIsImxhc3ROYW1lIjoibGFzdE5hbWUiLCJzdWIiOiJ1c2VybmFtZTMwMCIsImF1ZGl0VHJhY2tpbmdJZCI6IjczMDg1MWI3LTRlMmYtNGRmZS05MGJjLWNiY2RjZTUzMDM5ZS0xNjgyNiIsImlzcyI6Imh0dHBzOi8vYXhwcnVlY3pmYW0wMWxiLmNlbnRyYWwuaW5kaXRleC5ncnA6NDQzL29wZW5hbS9vYXV0aDIvemEvcHJlaW50IiwidG9rZW5OYW1lIjoiaWRfdG9rZW4iLCJ1c2VySWQiOiJ1c2VybmFtZTMwMCIsImF1ZCI6InRlc3QiLCJpZGVudGl0eVR5cGUiOiJSIiwiYXpwIjoidGVzdCIsInNjb3BlIjoidGVzdCIsImF1dGhfdGltZSI6MTUzMDc5NDUyOCwibmFtZSI6Im5hbWUiLCJyZWFsbSI6InRlc3QiLCJ1c2VyVHlwZSI6ImFkbWluIiwiYXV0aE1ldGhvZCI6IkxlZ2FjeS5aYXJhLlNlc3Npb25Ub2tlbiIsImV4cCI6MjAzMDc5NzIyOCwidG9rZW5UeXBlIjoiSldUVG9rZW4iLCJicmFuZCI6InphIiwiaWF0IjoxNTMwNzk0NTI4LCJhdXRoTGV2ZWwiOjEsImFjdHVhdG9yIjoidHJ1ZSJ9.n0n66FpyPjxjIYPdchcKljEenf5gfKv88jI_9qu0Ryk"
