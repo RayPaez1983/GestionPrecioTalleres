@@ -1,4 +1,4 @@
-package usecase;
+package usecase.in;
 
 import entity.User;
 
