@@ -15,37 +15,13 @@ public class DemoController {
     public ResponseEntity<Saludo> sayHello(){
         return ResponseEntity.ok(new Saludo());
     }
-    @PostMapping("/user")
-      Saludo newUser(@RequestBody Saludo newUser){
-        return saludoRepository.save(newUser);
-    }
 
-    @GetMapping("/users")
+    @GetMapping(value = "/user", produces =MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Saludo> getUser(){
+        return ResponseEntity.ok(new Saludo());
+    }
+    @GetMapping(value = "/users", produces =MediaType.APPLICATION_JSON_VALUE)
     List<Saludo> getAllUsers(){
         return saludoRepository.findAll();
-    }
-
-    @GetMapping("/user/{id}")
-    Saludo getUserById(@PathVariable Long id){
-        return saludoRepository.findById(id)
-                .orElseThrow(()-> new SaludoNotFoundException(id));
-    }
-    @PutMapping("/user/{id}")
-    Saludo updateUser(@RequestBody Saludo newUser,@PathVariable Long id){
-        return saludoRepository.findById(id)
-                .map(user -> {
-                    user.setUsername(newUser.getUsername());
-                    user.setName(newUser.getName());
-                    user.setEmail(newUser.getEmail());
-                    return saludoRepository.save(user);
-                }).orElseThrow(()-> new SaludoNotFoundException(id));
-    }
-    @DeleteMapping("/user/{id}")
-    String deleteUser(@PathVariable Long id){
-        if (!saludoRepository.existsById(id)){
-            throw new SaludoNotFoundException(id);
-        }
-        saludoRepository.deleteById(id);
-        return "User with " + id + " has been deleted";
     }
 }
