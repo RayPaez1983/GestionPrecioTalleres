@@ -8,9 +8,9 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.MariaDBDialect
   datasource:
-    url: 'jdbc:mariadb://localhost:3308/maestro_talleres'
+    url: 'jdbc:mariadb://localhost:3307/maestro_talleres'
     username: root
-    password: ramon1983
+    password: root
     driver-class-name: org.mariadb.jdbc.Driver
 
 metadata:
