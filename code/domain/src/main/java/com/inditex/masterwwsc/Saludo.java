@@ -1,9 +1,13 @@
 package com.inditex.masterwwsc;
 
+import jakarta.persistence.GeneratedValue;
 import lombok.Data;
+import org.springframework.data.annotation.Id;
 
 @Data
 public class Saludo {
+    @Id
+    @GeneratedValue
     private Long id;
     private String username;
     private String name;
@@ -41,9 +45,7 @@ public class Saludo {
         this.email = email;
     }
 
-    public String getSaludo() {
-        return saludo;
-    }
+    private  final String user = getUsername();
 
     private final String saludo ="Hello crack!!";
 
