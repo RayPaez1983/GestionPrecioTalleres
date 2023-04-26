@@ -2,6 +2,7 @@ package com.inditex.masterwwsc.entities;
 
 import jakarta.persistence.*;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Entity
@@ -25,14 +26,14 @@ public class Actividad {
     @Column(name = "COD_CENTRO_COMPRA")
     private Short CodCentroCompra;
 
-    @Column(name = "ES_NEGOCIABE")
-    private Boolean EsNegociable;
+    @Column(name = "ES_NEGOCIABLE")
+    private java.math.BigDecimal EsNegociable;
 
     @Column(name = "ES_INACTIVO")
-    private Boolean EsInactivo;
+    private java.math.BigDecimal EsInactivo;
 
     @Column(name = "ES_FACTOR_LOTE")
-    private Boolean EsFactorLote;
+    private java.math.BigDecimal EsFactorLote;
 
     @Column(name = "USUARIO_CREACION")
     private String UsuarioCreacion;
@@ -50,7 +51,7 @@ public class Actividad {
     private Integer CodigoActividad;
 
     @Column(name = "ES_REPETIBLE")
-    private Boolean EsRepetible;
+    private java.math.BigDecimal EsRepetible;
 
     public Long getIdActividad() {
         return IdActividad;
@@ -92,27 +93,27 @@ public class Actividad {
         CodCentroCompra = codCentroCompra;
     }
 
-    public Boolean getEsNegociable() {
+    public BigDecimal getEsNegociable() {
         return EsNegociable;
     }
 
-    public void setEsNegociable(Boolean esNegociable) {
+    public void setEsNegociable(BigDecimal esNegociable) {
         EsNegociable = esNegociable;
     }
 
-    public Boolean getEsInactivo() {
+    public BigDecimal getEsInactivo() {
         return EsInactivo;
     }
 
-    public void setEsInactivo(Boolean esInactivo) {
+    public void setEsInactivo(BigDecimal esInactivo) {
         EsInactivo = esInactivo;
     }
 
-    public Boolean getEsFactorLote() {
+    public BigDecimal getEsFactorLote() {
         return EsFactorLote;
     }
 
-    public void setEsFactorLote(Boolean esFactorLote) {
+    public void setEsFactorLote(BigDecimal esFactorLote) {
         EsFactorLote = esFactorLote;
     }
 
@@ -156,11 +157,11 @@ public class Actividad {
         CodigoActividad = codigoActividad;
     }
 
-    public Boolean getEsRepetible() {
+    public BigDecimal getEsRepetible() {
         return EsRepetible;
     }
 
-    public void setEsRepetible(Boolean esRepetible) {
+    public void setEsRepetible(BigDecimal esRepetible) {
         EsRepetible = esRepetible;
     }
 }
