@@ -1,7 +1,4 @@
 package com.inditex.masterwwsc;
-import com.inditex.masterwwsc.SaludoRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
