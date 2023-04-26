@@ -15,8 +15,12 @@ public class MaestroGrupoRedistribucionController {
     @Autowired
     private MaestroCentroOperacionRepository maestroCentroOperacionRepository;
 
+    public MaestroGrupoRedistribucionController(MaestroCentroOperacionRepository maestroCentroOperacionRepository) {
+        this.maestroCentroOperacionRepository = maestroCentroOperacionRepository;
+    }
+
     @GetMapping(value = "/maestro_centro_redistribucion", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<List <MaestroCentroDistribucion> getAllMaestroRedistribucion(){
+    public ResponseEntity<List <MaestroCentroDistribucion>> getAllMaestroRedistribucion(){
         return ResponseEntity.ok(maestroCentroOperacionRepository .findAll());
     }
 

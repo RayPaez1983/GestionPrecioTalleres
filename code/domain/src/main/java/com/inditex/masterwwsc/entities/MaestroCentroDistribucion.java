@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 public class MaestroCentroDistribucion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID_CENTRO_REOPERACION")
+    @Column(name = "ID_CENTRO_DISTRIBUCION")
     private Integer idCentroDistribucion;
 
     private String nombre;
@@ -21,8 +21,8 @@ public class MaestroCentroDistribucion {
     private LocalDateTime fechaHoraActualizacion;
     @Column(name = "USUARIO_BAJA")
     private String usuarioBaja;
-    @Column(name = "HORA_BAJA")
-    private LocalDateTime hora_baja;
+    @Column(name = "FECHA_HORA_BAJA")
+    private LocalDateTime fechaHoraBaja;
 
     public Integer getIdCentroDistribucion() {
         return idCentroDistribucion;
@@ -72,11 +72,11 @@ public class MaestroCentroDistribucion {
         this.usuarioBaja = usuarioBaja;
     }
 
-    public LocalDateTime getHora_baja() {
-        return hora_baja;
+    public LocalDateTime getFechaHoraBaja() {
+        return fechaHoraBaja;
     }
 
-    public void setHora_baja(LocalDateTime hora_baja) {
-        this.hora_baja = hora_baja;
+    public void setFechaHoraBaja(LocalDateTime fechaHoraBaja) {
+        this.fechaHoraBaja = fechaHoraBaja;
     }
 }
