@@ -64,6 +64,10 @@
           <artifactId>spring-web</artifactId>
           <version>6.0.7</version>
       </dependency>
+    <dependency>
+      <groupId>com.inditex.masterwwsc</groupId>
+      <artifactId>maestrotalleres-application</artifactId>
+    </dependency>
   </dependencies>
 
   <build>

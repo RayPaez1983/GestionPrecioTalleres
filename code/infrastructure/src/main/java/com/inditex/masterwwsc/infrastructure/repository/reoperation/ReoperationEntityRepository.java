@@ -15,10 +15,11 @@ import java.util.Optional;
 @Repository
 public class ReoperationEntityRepository implements TipoReoperacionRepository {
 
-    //private InMemoryReoperationEntityMapper inMemoryReoperationEntityMapper;
-
-    @Autowired
     private ReoperationJpaRepository reoperationJpaRepository;
+
+    public ReoperationEntityRepository(ReoperationJpaRepository reoperationJpaRepository) {
+        this.reoperationJpaRepository = reoperationJpaRepository;
+    }
 
     @Override
     public List<TipoReoperacion> findAll() {
@@ -29,10 +30,6 @@ public class ReoperationEntityRepository implements TipoReoperacionRepository {
     @Override
     public TipoReoperacion findById(BigInteger id) {
         Optional<InMemoryTipoReoperacionEntity> result = reoperationJpaRepository.findById(id);
-        if (result.isPresent()) {
-            return InMemoryReoperationEntityMapper.INSTANCE.toDomainEntity(result.get());
-        } else {
-            return null;
-        }
+        return result.map(InMemoryReoperationEntityMapper.INSTANCE::toDomainEntity).orElse(null);
     }
 }
