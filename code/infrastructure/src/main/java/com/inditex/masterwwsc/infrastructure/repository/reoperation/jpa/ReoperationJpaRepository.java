@@ -9,4 +9,5 @@ import java.math.BigInteger;
 @Repository
 public interface ReoperationJpaRepository extends JpaRepository<InMemoryTipoReoperacionEntity, BigInteger> {
 
+
 }
