@@ -2,27 +2,37 @@ package com.inditex.masterwwsc.infrastructure.repository.reoperation;
 
 import com.inditex.masterwwsc.entities.TipoReoperacion;
 import com.inditex.masterwwsc.infrastructure.domain.entity.InMemoryTipoReoperacionEntity;
-import com.inditex.masterwwsc.infrastructure.mapper.inmemory.InMemoryEntityMapper;
 import com.inditex.masterwwsc.infrastructure.mapper.inmemory.InMemoryReoperationEntityMapper;
 import com.inditex.masterwwsc.infrastructure.repository.reoperation.jpa.ReoperationJpaRepository;
 import com.inditex.masterwwsc.repository.TipoReoperacionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.math.BigInteger;
 import java.util.List;
+import java.util.Optional;
+
 @Repository
 public class ReoperationEntityRepository implements TipoReoperacionRepository {
 
-
-    @Autowired
-     private InMemoryReoperationEntityMapper inMemoryReoperationEntityMapper;
+    //private InMemoryReoperationEntityMapper inMemoryReoperationEntityMapper;
 
     @Autowired
     private ReoperationJpaRepository reoperationJpaRepository;
+
     @Override
     public List<TipoReoperacion> findAll() {
-
         List<InMemoryTipoReoperacionEntity> result = reoperationJpaRepository.findAll();
-        return inMemoryReoperationEntityMapper.toDomainEntityList(result);
+        return InMemoryReoperationEntityMapper.INSTANCE.toDomainEntityList(result);
+    }
+
+    @Override
+    public TipoReoperacion findById(BigInteger id) {
+        Optional<InMemoryTipoReoperacionEntity> result = reoperationJpaRepository.findById(id);
+        if (result.isPresent()) {
+            return InMemoryReoperationEntityMapper.INSTANCE.toDomainEntity(result.get());
+        } else {
+            return null;
+        }
     }
 }

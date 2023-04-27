@@ -8,6 +8,6 @@ public interface InMemoryEntityMapper<DOMAIN_ENTITY,INMEMORY_ENTITY> {
     INMEMORY_ENTITY fromDomainEntity(DOMAIN_ENTITY domainEntity);
 
     List<DOMAIN_ENTITY> toDomainEntityList(List<INMEMORY_ENTITY> inMemoryEntity);
-    List<INMEMORY_ENTITY> fromDomainEntityList (List<DOMAIN_ENTITY> domainEntity);
+    //List<INMEMORY_ENTITY> fromDomainEntityList (List<DOMAIN_ENTITY> domainEntity);
 
 }
