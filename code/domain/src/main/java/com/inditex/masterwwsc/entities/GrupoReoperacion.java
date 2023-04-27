@@ -2,7 +2,6 @@ package com.inditex.masterwwsc.entities;
 
 import jakarta.persistence.*;
 
-import java.math.BigInteger;
 import java.time.LocalDateTime;
 
 @Entity
@@ -64,4 +63,5 @@ public class GrupoReoperacion {
     public void setFechaHoraActualizacion(LocalDateTime fechaHoraActualizacion) {
         FechaHoraActualizacion = fechaHoraActualizacion;
     }
+
 }

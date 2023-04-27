@@ -48,6 +48,10 @@ local.properties
 **/src/main/frontend/dist/**
 yarn.lock
 
+# Application
+/application.yml
+
+
 # Maven revision
 .flattened-pom.xml​
 
