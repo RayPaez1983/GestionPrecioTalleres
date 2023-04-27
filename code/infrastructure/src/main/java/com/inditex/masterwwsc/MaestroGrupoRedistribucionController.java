@@ -16,7 +16,7 @@ public class MaestroGrupoRedistribucionController {
     private MaestroCentroOperacionRepository maestroCentroOperacionRepository;
 
     @GetMapping(value = "/maestro_centro_redistribucion", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<List <MaestroCentroDistribucion> getAllMaestroRedistribucion(){
+    public ResponseEntity<List <MaestroCentroDistribucion>> getAllMaestroRedistribucion(){
         return ResponseEntity.ok(maestroCentroOperacionRepository .findAll());
     }
 
