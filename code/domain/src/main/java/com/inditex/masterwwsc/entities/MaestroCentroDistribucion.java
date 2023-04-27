@@ -12,6 +12,7 @@ public class MaestroCentroDistribucion {
 
     @Column(name = "ID_CENTRO_DISTRIBUCION")
     private Integer idCentroDistribucion;
+
     @Column(name = "NOMBRE")
     private String Nombre;
     @Column(name = "USUARIO_CREACION")
@@ -22,9 +23,8 @@ public class MaestroCentroDistribucion {
     private LocalDateTime fechaHoraActualizacion;
     @Column(name = "USUARIO_BAJA")
     private String usuarioBaja;
-
     @Column(name = "FECHA_HORA_BAJA")
-    private LocalDateTime hora_baja;
+    private LocalDateTime fechaHoraBaja;
 
     public String getNombre() {
         return Nombre;
@@ -74,11 +74,11 @@ public class MaestroCentroDistribucion {
         this.usuarioBaja = usuarioBaja;
     }
 
-    public LocalDateTime getHora_baja() {
-        return hora_baja;
+    public LocalDateTime getFechaHoraBaja() {
+        return fechaHoraBaja;
     }
 
-    public void setHora_baja(LocalDateTime hora_baja) {
-        this.hora_baja = hora_baja;
+    public void setFechaHoraBaja(LocalDateTime fechaHoraBaja) {
+        this.fechaHoraBaja = fechaHoraBaja;
     }
 }
