@@ -1,11 +1,14 @@
 package com.inditex.masterwwsc.infrastructure.domain.entity;
 
+import com.inditex.masterwwsc.entities.TipoReoperacion;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.time.LocalDateTime;
+
 
 @Data
 @Entity
@@ -20,7 +23,7 @@ public class InMemoryTipoReoperacionEntity {
     @Column(name = "FECHA_HORA_CREACION")
     private LocalDateTime FechaHoraCreacion;
     @Column(name = "USUARIO_ACTUALIZACION")
-    private String UusarioActualizacion;
+    private String UsarioActualizacion;
     @Column(name = "FECHA_HORA_ACTUALIZACION")
     private LocalDateTime FechaHoraActualizacion;
     @Column(name = "COD_TIPO_REOPERACION_AS400")
@@ -33,5 +36,6 @@ public class InMemoryTipoReoperacionEntity {
     private BigDecimal EsInactivo;
     @Column(name = "CODIGO_TIPO_REOPERACION")
     private Integer CodigoTipoReoperacion;
+
 
 }

@@ -1,11 +1,12 @@
 package com.inditex.masterwwsc.entities;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.time.LocalDateTime;
-
+@AllArgsConstructor
 @Data
 public class TipoReoperacion {
 
