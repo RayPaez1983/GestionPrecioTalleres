@@ -1,225 +1,232 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  
-  <parent>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-parent</artifactId>
-    <version>3.0.5</version>
-    <relativePath/> <!-- lookup parent from repository -->
-  </parent>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.inditex.masterwwsc</groupId>
-  <artifactId>maestrotalleres</artifactId>
-  <version>0.1.0-SNAPSHOT</version>
-  <packaging>pom</packaging>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.0.5</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <groupId>com.inditex.masterwwsc</groupId>
+    <artifactId>maestrotalleres</artifactId>
+    <version>0.1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
 
-  <name>${project.groupId}:${project.artifactId}</name>
-  <description />
-  <url />
-  <inceptionYear>2023</inceptionYear>
-  <organization>
-    <name>Industria de Diseño Textil, S.A.</name>
-    <url>https://inditex.com</url>
-  </organization>
-  <licenses />
+    <name>${project.groupId}:${project.artifactId}</name>
+    <description/>
+    <url/>
+    <inceptionYear>2023</inceptionYear>
+    <organization>
+        <name>Industria de Diseño Textil, S.A.</name>
+        <url>https://inditex.com</url>
+    </organization>
+    <licenses/>
 
-  <developers />
+    <developers/>
 
-  <modules>
-    <module>domain</module>
-    <module>application</module>
-    <module>infrastructure</module>
-    <module>api-rest</module>
-    <module>boot</module>
-  </modules>
+    <modules>
+        <module>domain</module>
+        <module>application</module>
+        <module>infrastructure</module>
+        <module>api-rest</module>
+        <module>boot</module>
+    </modules>
 
-  <!-- <scm>
-    <connection>${scm-connection}</connection>
-    <developerConnection>${scm-developer-connection}</developerConnection>
-    <url>${scm-url}</url>
-    <tag>${scm-tag}</tag>
-  </scm> -->
+    <!-- <scm>
+      <connection>${scm-connection}</connection>
+      <developerConnection>${scm-developer-connection}</developerConnection>
+      <url>${scm-url}</url>
+      <tag>${scm-tag}</tag>
+    </scm> -->
 
-  <!-- <distributionManagement>
-    <repository>
-      <id>inditex-artifacts</id>
-      <name>Inditex Maven Repository</name>
-      <url>https://inditex.jfrog.io/inditex/maven-release-local</url>
-    </repository>
-    <snapshotRepository>
-      <id>inditex-artifacts</id>
-      <name>Inditex Maven Repository</name>
-      <url>https://inditex.jfrog.io/inditex/maven-snapshot-local</url>
-    </snapshotRepository>
-    <site />
-  </distributionManagement> -->
+    <!-- <distributionManagement>
+      <repository>
+        <id>inditex-artifacts</id>
+        <name>Inditex Maven Repository</name>
+        <url>https://inditex.jfrog.io/inditex/maven-release-local</url>
+      </repository>
+      <snapshotRepository>
+        <id>inditex-artifacts</id>
+        <name>Inditex Maven Repository</name>
+        <url>https://inditex.jfrog.io/inditex/maven-snapshot-local</url>
+      </snapshotRepository>
+      <site />
+    </distributionManagement> -->
 
-  <properties>
-    <!-- <amginitz-rest.version>1.2.0</amginitz-rest.version> -->
-    <!-- <amiga-javaformat.version>2.4.0</amiga-javaformat.version> -->
-    <!-- <scm-developer-connection>scm:git:https://github.com/inditex/wsc-maestrotalleres.git</scm-developer-connection>
-    <scm-connection>scm:git:https://github.com/inditex/wsc-maestrotalleres.git</scm-connection>
-    <scm-url>https://github.com/inditex/wsc-maestrotalleres</scm-url> -->
-    <scm-tag>HEAD</scm-tag>
-    <!-- <project.scm.id>inditex-scm-github</project.scm.id> -->
-    <release.strategy.multibaseline>false</release.strategy.multibaseline>
-    <release.strategy.developmentBranch>develop</release.strategy.developmentBranch>
-    <release.strategy.syncPullReqLabels>kind/internal</release.strategy.syncPullReqLabels>
-    <release.strategy.createSyncPR>true</release.strategy.createSyncPR>
-    <java.version>17</java.version>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
-  </properties>
+    <properties>
+        <!-- <amginitz-rest.version>1.2.0</amginitz-rest.version> -->
+        <!-- <amiga-javaformat.version>2.4.0</amiga-javaformat.version> -->
+        <!-- <scm-developer-connection>scm:git:https://github.com/inditex/wsc-maestrotalleres.git</scm-developer-connection>
+        <scm-connection>scm:git:https://github.com/inditex/wsc-maestrotalleres.git</scm-connection>
+        <scm-url>https://github.com/inditex/wsc-maestrotalleres</scm-url> -->
+        <scm-tag>HEAD</scm-tag>
+        <!-- <project.scm.id>inditex-scm-github</project.scm.id> -->
+        <release.strategy.multibaseline>false</release.strategy.multibaseline>
+        <release.strategy.developmentBranch>develop</release.strategy.developmentBranch>
+        <release.strategy.syncPullReqLabels>kind/internal</release.strategy.syncPullReqLabels>
+        <release.strategy.createSyncPR>true</release.strategy.createSyncPR>
+        <java.version>17</java.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
 
-  <dependencyManagement>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>maestrotalleres-boot</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>maestrotalleres-domain</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>maestrotalleres-application</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>maestrotalleres-infrastructure</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <!-- Include API First REST contract definition. TODO: Only for archetype. Replace this for the real API. -->
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>maestrotalleres-api-rest</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <!-- Include API First REST contract definition. TODO: Only for archetype. Replace this for the real API.-->
+            <!-- <dependency>
+              <groupId>com.inditex.api</groupId>
+              <artifactId>amginitr-amiga-initializr-rest-protocol-example-rest-stable</artifactId>
+              <version>${amginitz-rest.version}</version>
+            </dependency> -->
+
+
+        </dependencies>
+    </dependencyManagement>
     <dependencies>
-      <dependency>
-        <groupId>${project.groupId}</groupId>
-        <artifactId>maestrotalleres-boot</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>${project.groupId}</groupId>
-        <artifactId>maestrotalleres-domain</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>${project.groupId}</groupId>
-        <artifactId>maestrotalleres-application</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>${project.groupId}</groupId>
-        <artifactId>maestrotalleres-infrastructure</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <!-- Include API First REST contract definition. TODO: Only for archetype. Replace this for the real API. -->
-      <dependency>
-        <groupId>${project.groupId}</groupId>
-        <artifactId>maestrotalleres-api-rest</artifactId>
-        <version>${project.version}</version>
-      </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
 
-      <!-- Include API First REST contract definition. TODO: Only for archetype. Replace this for the real API.-->
-      <!-- <dependency>
-        <groupId>com.inditex.api</groupId>
-        <artifactId>amginitr-amiga-initializr-rest-protocol-example-rest-stable</artifactId>
-        <version>${amginitz-rest.version}</version>
-      </dependency> -->
-
-
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>5.3.1</version>
+        </dependency>
     </dependencies>
-  </dependencyManagement>
-  <dependencies>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-web</artifactId>
-    </dependency>
 
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-devtools</artifactId>
-      <scope>runtime</scope>
-      <optional>true</optional>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-test</artifactId>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
+    <repositories/>
+    <pluginRepositories/>
 
-  <repositories />
-  <pluginRepositories />
+    <build>
+        <finalName>${project.artifactId}-${project.version}</finalName>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-release-plugin</artifactId>
+                    <version>3.0.0-M4</version>
+                    <dependencies>
+                        <dependency>
+                            <groupId>com.inditex.maven.release</groupId>
+                            <artifactId>maven-release-strategies</artifactId>
+                            <version>0.7.1</version>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.apache.maven.release</groupId>
+                            <artifactId>maven-release-semver-policy</artifactId>
+                            <version>3.0.0-M4</version>
+                        </dependency>
+                    </dependencies>
+                    <configuration>
+                        <arguments>-DskipEnforceSnapshots -DskipITs -Dbuild.type=release</arguments>
+                        <goals>-DskipTests -DskipITs deploy</goals>
+                        <projectVersionPolicyId>SemVerVersionPolicy</projectVersionPolicyId>
+                        <releaseStrategyId>GithubReleaseStrategy</releaseStrategyId>
+                        <scmReleaseCommitComment>@{prefix} Prepare release @{releaseLabel}</scmReleaseCommitComment>
+                        <scmDevelopmentCommitComment>@{prefix} Prepare for next development iteration
+                        </scmDevelopmentCommitComment>
+                        <tagNameFormat>@{project.version}</tagNameFormat>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
 
-  <build>
-    <finalName>${project.artifactId}-${project.version}</finalName>
-    <pluginManagement>
-      <plugins>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-release-plugin</artifactId>
-          <version>3.0.0-M4</version>
-          <dependencies>
-            <dependency>
-              <groupId>com.inditex.maven.release</groupId>
-              <artifactId>maven-release-strategies</artifactId>
-              <version>0.7.1</version>
-            </dependency>
-            <dependency>
-              <groupId>org.apache.maven.release</groupId>
-              <artifactId>maven-release-semver-policy</artifactId>
-              <version>3.0.0-M4</version>
-            </dependency>
-          </dependencies>
-          <configuration>
-            <arguments>-DskipEnforceSnapshots -DskipITs -Dbuild.type=release</arguments>
-            <goals>-DskipTests -DskipITs deploy</goals>
-            <projectVersionPolicyId>SemVerVersionPolicy</projectVersionPolicyId>
-            <releaseStrategyId>GithubReleaseStrategy</releaseStrategyId>
-            <scmReleaseCommitComment>@{prefix} Prepare release @{releaseLabel}</scmReleaseCommitComment>
-            <scmDevelopmentCommitComment>@{prefix} Prepare for next development iteration</scmDevelopmentCommitComment>
-            <tagNameFormat>@{project.version}</tagNameFormat>
-          </configuration>
-        </plugin>
-        <plugin>
-          <groupId>org.springframework.boot</groupId>
-          <artifactId>spring-boot-maven-plugin</artifactId>
+                    <!-- <configuration>
+                      <mainClass>com.inditex.masterwwsc.Application</mainClass>
+                    </configuration> -->
 
-          <!-- <configuration>
-            <mainClass>com.inditex.masterwwsc.Application</mainClass>
-          </configuration> -->
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <!-- <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-enforcer-plugin</artifactId>
+              <executions>
+                <execution>
+                  <id>enforce-versions</id>
+                  <phase>validate</phase>
+                  <goals>
+                    <goal>enforce</goal>
+                  </goals>
+                  <configuration>
+                    <rules>
+                      <requireMavenVersion>
+                        <version>[3.6.3],[3.8.4]</version>
+                      </requireMavenVersion>
+                      <requireJavaVersion>
+                        <version>[11,12),[17,18)</version>
+                      </requireJavaVersion>
+                    </rules>
+                  </configuration>
+                </execution>
+                <execution>
+                  <id>enforce-snapshots</id>
+                  <phase>validate</phase>
+                  <goals>
+                    <goal>enforce</goal>
+                  </goals>
+                  <configuration>
+                    <skip>${skipEnforceSnapshots}</skip>
+                    <rules>
+                      <requireSnapshotVersion>
+                        <failWhenParentIsRelease>false</failWhenParentIsRelease>
+                        <message>Final versions not allowed</message>
+                      </requireSnapshotVersion>
+                    </rules>
+                  </configuration>
+                </execution>
+              </executions>
+            </plugin> -->
+        </plugins>
+    </build>
 
-        </plugin>
-      </plugins>
-    </pluginManagement>
-    <plugins>
-      <!-- <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-enforcer-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>enforce-versions</id>
-            <phase>validate</phase>
-            <goals>
-              <goal>enforce</goal>
-            </goals>
-            <configuration>
-              <rules>
-                <requireMavenVersion>
-                  <version>[3.6.3],[3.8.4]</version>
-                </requireMavenVersion>
-                <requireJavaVersion>
-                  <version>[11,12),[17,18)</version>
-                </requireJavaVersion>
-              </rules>
-            </configuration>
-          </execution>
-          <execution>
-            <id>enforce-snapshots</id>
-            <phase>validate</phase>
-            <goals>
-              <goal>enforce</goal>
-            </goals>
-            <configuration>
-              <skip>${skipEnforceSnapshots}</skip>
-              <rules>
-                <requireSnapshotVersion>
-                  <failWhenParentIsRelease>false</failWhenParentIsRelease>
-                  <message>Final versions not allowed</message>
-                </requireSnapshotVersion>
-              </rules>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin> -->
-    </plugins>
-  </build>
+    <reporting/>
 
-  <reporting />
-
-  <profiles />
+    <profiles/>
 
 </project>
