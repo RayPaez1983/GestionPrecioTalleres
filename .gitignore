@@ -49,7 +49,7 @@ local.properties
 yarn.lock
 
 # Application
-application.yml
+.application.yml
 
 
 # Maven revision
