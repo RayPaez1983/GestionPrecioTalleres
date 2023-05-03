@@ -1,11 +1,17 @@
 package com.inditex.masterwwsc.repository;
 
 import com.inditex.masterwwsc.entities.Idioma;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
 
 import java.math.BigInteger;
+import java.util.List;
 
-@Repository
-public interface IdiomaRepository extends JpaRepository<Idioma, BigInteger> {
+public interface IdiomaRepository  {
+
+    List<Idioma> findAll();
+
+    Idioma findById(BigInteger id);
+
+    Idioma findByCodigo(String codigo);
+
+    Idioma findByNombre(String nombre);
 }
