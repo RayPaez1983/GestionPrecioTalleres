@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 @Data
 public class Idioma {
 
-    private Long idIdioma;
+    private Integer idIdioma;
     private String codigo;
     private String nombre;
     private String usuarioCreacion;
