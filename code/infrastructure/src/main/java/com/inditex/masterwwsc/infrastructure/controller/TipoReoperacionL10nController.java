@@ -1,6 +1,18 @@
 package com.inditex.masterwwsc.infrastructure.controller;
 
+import com.inditex.masterwwsc.entities.TipoReoperacionL10n;
+import com.inditex.masterwwsc.infrastructure.repository.tipoReoperationL10n.TipoReoperationL10nEntityRepository;
+import com.inditex.masterwwsc.usecases.FindAllReoperationL10nUseCase;
+import com.inditex.masterwwsc.usecases.FindByIdReoperationL10nUseCase;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.math.BigInteger;
+import java.util.List;
 
 
 @RestController

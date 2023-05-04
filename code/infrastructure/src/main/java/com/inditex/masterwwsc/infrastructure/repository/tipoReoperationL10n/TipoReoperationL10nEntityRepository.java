@@ -11,7 +11,8 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 import java.util.Optional;
 
-public class TipoReoperationL10nEntityRepository implements TipoReoperacionL10nJpaRepository {
+@Repository
+public class TipoReoperationL10nEntityRepository implements TipoReoperacionL10nRepository {
 
     private TipoReoperationL10nJpaRepository tipoReoperationL10nJpaRepository;
 
