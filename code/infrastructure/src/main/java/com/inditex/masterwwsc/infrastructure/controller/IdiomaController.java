@@ -35,7 +35,7 @@ public class IdiomaController {
     public IdiomaController(FindAllIdiomasUseCaseImp findAllIdiomasUseCaseImp, FindByIdIdiomaUseCaseImp findByIdIdiomaUseCaseImp, FindByCodigoIdiomaUseCaseImp findByCodigoIdiomaUseCaseImp, FindByNombreIdiomaUseCaseImp findByNombreIdiomaUseCaseImp) {
         this.findAllIdiomasUseCase = findAllIdiomasUseCaseImp;
         this.findByIdIdiomaUseCase = findByIdIdiomaUseCaseImp;
-        this.findByCodigoIdiomaUseCase  = findByCodigoIdiomaUseCaseImp;
+        this.findByCodigoIdiomaUseCase = findByCodigoIdiomaUseCaseImp;
         this.findByNombreIdiomaUseCase = findByNombreIdiomaUseCaseImp;
     }
 

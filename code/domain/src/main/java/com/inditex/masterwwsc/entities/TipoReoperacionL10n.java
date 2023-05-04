@@ -1,19 +1,21 @@
 package com.inditex.masterwwsc.entities;
 
-import java.math.BigDecimal;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
 import java.time.LocalDateTime;
 
-public class TipoReoperacionI10n {
+@AllArgsConstructor
+@Data
+public class TipoReoperacionL10n {
     private Integer IdTipoReoperacion;
     private Integer IdIdioma;
+    //private TipoReoperacion IdTipoReoperacion;
+    //private Idioma IdIdioma;
     private String Nombre;
     private String UsuarioCreacion;
     private LocalDateTime FechaHoraCreacion;
     private String UsuarioActualizacion;
     private LocalDateTime FechaHoraActualizacion;
-    private Integer CodTipoReoperacionAs400;
-    private Integer CodCadena;
-    private Integer CodCentroCompra;
-    private BigDecimal EsInactivo;
-    private Integer CodigoTipoReoperacion;
+
 }
