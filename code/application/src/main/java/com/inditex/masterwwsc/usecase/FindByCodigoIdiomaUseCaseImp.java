@@ -10,12 +10,12 @@ public class FindByCodigoIdiomaUseCaseImp implements FindByCodigoIdiomaUseCase {
 
     private IdiomaRepository idiomaRepository;
 
-    public FindByCodigoIdiomaUseCaseImp(IdiomaRepository idiomaRepository){
+    public FindByCodigoIdiomaUseCaseImp(IdiomaRepository idiomaRepository) {
         this.idiomaRepository = idiomaRepository;
     }
 
     @Override
-    public Idioma findByCodigo(String codigo){
+    public Idioma findByCodigo(String codigo) {
         return idiomaRepository.findByCodigo(codigo);
     }
 

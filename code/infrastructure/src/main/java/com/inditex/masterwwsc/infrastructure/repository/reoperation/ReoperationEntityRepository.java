@@ -5,7 +5,6 @@ import com.inditex.masterwwsc.infrastructure.domain.entity.InMemoryTipoReoperaci
 import com.inditex.masterwwsc.infrastructure.mapper.inmemory.InMemoryReoperationEntityMapper;
 import com.inditex.masterwwsc.infrastructure.repository.reoperation.jpa.ReoperationJpaRepository;
 import com.inditex.masterwwsc.repository.TipoReoperacionRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.math.BigInteger;
