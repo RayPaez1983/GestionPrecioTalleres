@@ -68,6 +68,12 @@
       <groupId>com.inditex.masterwwsc</groupId>
       <artifactId>maestrotalleres-application</artifactId>
     </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-test</artifactId>
+      <version>5.3.3</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
 
   <build>
