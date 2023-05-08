@@ -25,7 +25,7 @@ public class TipoReoperacionController {
     private FindByIdReoperationUseCase findByIdReoperationUseCase;
 
 
-    public TipoReoperacionController(ListAllReoperationUseCaseImp listAllReoperationUseCaseImp,FindByIdReoperationUseCaseImpl findByIdReoperationUseCaseImpl) {
+    public TipoReoperacionController(ListAllReoperationsUseCase listAllReoperationUseCaseImp,FindByIdReoperationUseCase findByIdReoperationUseCaseImpl) {
         this.listAllReoperationsUseCase = listAllReoperationUseCaseImp;
         this.findByIdReoperationUseCase = findByIdReoperationUseCaseImpl;
     }

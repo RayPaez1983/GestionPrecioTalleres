@@ -32,7 +32,7 @@ public class IdiomaController {
 
     private FindByNombreIdiomaUseCase findByNombreIdiomaUseCase;
 
-    public IdiomaController(FindAllIdiomasUseCaseImp findAllIdiomasUseCaseImp, FindByIdIdiomaUseCaseImp findByIdIdiomaUseCaseImp, FindByCodigoIdiomaUseCaseImp findByCodigoIdiomaUseCaseImp, FindByNombreIdiomaUseCaseImp findByNombreIdiomaUseCaseImp) {
+    public IdiomaController(FindAllIdiomasUseCase findAllIdiomasUseCaseImp, FindByIdIdiomaUseCase findByIdIdiomaUseCaseImp, FindByCodigoIdiomaUseCase findByCodigoIdiomaUseCaseImp, FindByNombreIdiomaUseCase findByNombreIdiomaUseCaseImp) {
         this.findAllIdiomasUseCase = findAllIdiomasUseCaseImp;
         this.findByIdIdiomaUseCase = findByIdIdiomaUseCaseImp;
         this.findByCodigoIdiomaUseCase = findByCodigoIdiomaUseCaseImp;
