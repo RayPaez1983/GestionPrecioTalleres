@@ -3,7 +3,9 @@ package com.inditex.masterwwc.infrastructure.controller;
 import com.inditex.masterwwsc.entities.Idioma;
 import com.inditex.masterwwsc.infrastructure.controller.IdiomaController;
 import com.inditex.masterwwsc.usecases.FindAllIdiomasUseCase;
+import com.inditex.masterwwsc.usecases.FindByCodigoIdiomaUseCase;
 import com.inditex.masterwwsc.usecases.FindByIdIdiomaUseCase;
+import com.inditex.masterwwsc.usecases.FindByNombreIdiomaUseCase;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
@@ -22,6 +24,10 @@ public class IdiomaControllerTest {
     FindAllIdiomasUseCase findAllIdiomasUseCase;
     @Mock
     FindByIdIdiomaUseCase findByIdIdiomaUseCase;
+    @Mock
+    FindByCodigoIdiomaUseCase findByCodigoIdiomaUseCase;
+    @Mock
+    FindByNombreIdiomaUseCase findByNombreIdiomaUseCase;
     List<Idioma> idiomas;
     Idioma idioma;
     @InjectMocks
@@ -44,6 +50,20 @@ public class IdiomaControllerTest {
     void FindById() {
         when(findByIdIdiomaUseCase.findById(BigInteger.valueOf(1))).thenReturn(idioma);
         ResponseEntity<Idioma> result = idiomaController.getIdiomaById(BigInteger.valueOf(1));
+        assertEquals(idioma, result.getBody());
+    }
+
+    @Test
+    void testGetIdiomaByCodigo() {
+        when(findByCodigoIdiomaUseCase.findByCodigo("es")).thenReturn(idioma);
+        ResponseEntity<Idioma> result = idiomaController.getIdiomaByCodigo("es");
+        assertEquals(idioma, result.getBody());
+    }
+
+    @Test
+    void testGetIdiomaByNombre() {
+        when(findByNombreIdiomaUseCase.findByNombre("Ingles")).thenReturn(idioma);
+        ResponseEntity<Idioma> result = idiomaController.getIdiomaByNombre("Ingles");
         assertEquals(idioma, result.getBody());
     }
 }
