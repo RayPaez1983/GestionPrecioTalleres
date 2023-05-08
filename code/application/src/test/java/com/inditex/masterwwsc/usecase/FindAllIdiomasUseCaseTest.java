@@ -18,7 +18,7 @@ public class FindAllIdiomasUseCaseTest {
     @Mock
     IdiomaRepository idiomaRepository;
 
-    @Mock
+
     List<Idioma> idiomaList;
 
     @InjectMocks
