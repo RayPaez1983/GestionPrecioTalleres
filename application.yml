@@ -10,7 +10,7 @@ spring:
   datasource:
     url: 'jdbc:mariadb://localhost:3306/maestro_talleres'
     username: root
-    password: mysqlp4bl0
+    password: root
     driver-class-name: org.mariadb.jdbc.Driver
 
 metadata:
