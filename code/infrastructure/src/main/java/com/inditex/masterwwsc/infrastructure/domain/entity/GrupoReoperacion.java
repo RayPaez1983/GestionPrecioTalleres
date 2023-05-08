@@ -1,4 +1,4 @@
-package com.inditex.masterwwsc.entities;
+package com.inditex.masterwwsc.infrastructure.domain.entity;
 
 import jakarta.persistence.*;
 

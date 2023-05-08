@@ -2,7 +2,6 @@ package com.inditex.masterwwsc.infrastructure.controller;
 
 import com.inditex.masterwwsc.entities.TipoReoperacion;
 import com.inditex.masterwwsc.infrastructure.repository.reoperation.ReoperationEntityRepository;
-import com.inditex.masterwwsc.repository.GrupoReoperacionRepository;
 import com.inditex.masterwwsc.usecase.FindByIdReoperationUseCaseImpl;
 import com.inditex.masterwwsc.usecase.ListAllReoperationUseCaseImp;
 import com.inditex.masterwwsc.usecases.FindByIdReoperationUseCase;
