@@ -16,6 +16,7 @@ import java.util.List;
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 public class IdiomaRepositoryTest {
@@ -23,7 +24,6 @@ public class IdiomaRepositoryTest {
     @Mock
     IdiomaJpaRepository idiomaJpaRepository;
 
-    //List<InMemoryIdiomaRepositoryEntity> inMemoryIdiomaRepositoryEntities;
     List<Idioma> idiomas;
 
     Idioma idioma;
@@ -46,6 +46,7 @@ public class IdiomaRepositoryTest {
         when(InMemoryIdiomaEntityMapper.INSTANCE.toDomainEntityList(idiomaJpaRepository.findAll())).thenReturn(idiomas);
         List<Idioma> result = idiomaEntityRepository.findAll();
         assertEquals(idiomas, result);
+        verify(idiomaJpaRepository).findAll();
     }
 
     @Test
@@ -55,7 +56,6 @@ public class IdiomaRepositoryTest {
         when(InMemoryIdiomaEntityMapper.INSTANCE.toDomainEntity(idiomaJpaRepository.findById(id).get())).thenReturn(idioma);
         Idioma result = idiomaEntityRepository.findById(id);
         assertEquals(idioma, result);
-
     }
 
     @Test

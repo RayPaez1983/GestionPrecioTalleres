@@ -5,6 +5,7 @@ import com.inditex.masterwwsc.infrastructure.domain.entity.InMemoryIdiomaReposit
 import com.inditex.masterwwsc.infrastructure.mapper.inmemory.InMemoryIdiomaEntityMapper;
 import com.inditex.masterwwsc.infrastructure.repository.idioma.jpa.IdiomaJpaRepository;
 import com.inditex.masterwwsc.repository.IdiomaRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.math.BigInteger;
@@ -14,11 +15,8 @@ import java.util.Optional;
 @Repository
 public class IdiomaEntityRepository implements IdiomaRepository {
 
+    @Autowired
     private IdiomaJpaRepository idiomaJpaRepository;
-
-    public IdiomaEntityRepository(IdiomaJpaRepository idiomaJpaRepository) {
-        this.idiomaJpaRepository = idiomaJpaRepository;
-    }
 
     @Override
     public List<Idioma> findAll() {

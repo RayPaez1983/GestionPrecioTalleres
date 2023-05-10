@@ -6,6 +6,7 @@ import com.inditex.masterwwsc.infrastructure.domain.entity.TipoReoperacionL10nEm
 import com.inditex.masterwwsc.infrastructure.mapper.inmemory.InMemoryTipoReoperacionL10nEntityMapper;
 import com.inditex.masterwwsc.infrastructure.repository.tipoReoperationL10n.jpa.TipoReoperationL10nJpaRepository;
 import com.inditex.masterwwsc.repository.TipoReoperacionL10nRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -14,11 +15,8 @@ import java.util.Optional;
 @Repository
 public class TipoReoperationL10nEntityRepository implements TipoReoperacionL10nRepository {
 
+    @Autowired
     private TipoReoperationL10nJpaRepository tipoReoperationL10nJpaRepository;
-
-    public TipoReoperationL10nEntityRepository(TipoReoperationL10nJpaRepository tipoReoperationL10nJpaRepository) {
-        this.tipoReoperationL10nJpaRepository = tipoReoperationL10nJpaRepository;
-    }
 
     @Override
     public List<TipoReoperacionL10n> findAll() {

@@ -5,6 +5,7 @@ import com.inditex.masterwwsc.infrastructure.domain.entity.InMemoryTipoReoperaci
 import com.inditex.masterwwsc.infrastructure.mapper.inmemory.InMemoryReoperationEntityMapper;
 import com.inditex.masterwwsc.infrastructure.repository.reoperation.jpa.ReoperationJpaRepository;
 import com.inditex.masterwwsc.repository.TipoReoperacionRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.math.BigInteger;
@@ -14,11 +15,8 @@ import java.util.Optional;
 @Repository
 public class ReoperationEntityRepository implements TipoReoperacionRepository {
 
+    @Autowired
     private ReoperationJpaRepository reoperationJpaRepository;
-
-    public ReoperationEntityRepository(ReoperationJpaRepository reoperationJpaRepository) {
-        this.reoperationJpaRepository = reoperationJpaRepository;
-    }
 
     @Override
     public List<TipoReoperacion> findAll() {
